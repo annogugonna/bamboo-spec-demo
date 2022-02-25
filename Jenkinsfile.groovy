@@ -19,12 +19,12 @@ pipeline{
         }
         stage('Tar image'){
             steps{
-                sh "docker save hugoboss192/hariapp:dockertag --output cmx-image.tar"
+                sh "file xmc-checking.txt.tgz"
             }
         }
         stage('Archive Artifacts'){
             steps {
-                archiveArtifacts artifacts: 'cmx-image.tar', onlyIfSuccessful: true
+                archiveArtifacts artifacts: 'xmc-checking.txt.tgz', onlyIfSuccessful: true
                 cleanWs cleanWhenAborted: false, cleanWhenFailure: false, cleanWhenNotBuilt: false, cleanWhenUnstable: false
             }
         }
