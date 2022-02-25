@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Run Playbook'){
             steps{
-                ansiblePlaybook credentialsId: 'keys', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory.txt', playbook: 'Build.yml', tags: 'xmc'
+                ansiblePlaybook credentialsId: 'keys', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory.txt', playbook: 'Build.yml', tags: 'oncast'
             }
         }
         stage('Tar image'){
