@@ -22,7 +22,6 @@ pipeline{
         stage('Archive Artifacts'){
             steps {
                 archiveArtifacts artifacts: 'xmc-checking.txt.tgz', onlyIfSuccessful: true
-                cleanWs cleanWhenAborted: false, cleanWhenFailure: false, cleanWhenNotBuilt: false, cleanWhenUnstable: false
             }
         }
     }
