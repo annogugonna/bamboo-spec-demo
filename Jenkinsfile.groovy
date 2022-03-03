@@ -21,7 +21,7 @@ pipeline{
         }
         stage('Archive Artifacts'){
             steps {
-                archiveArtifacts artifacts: 'xmc-checking.txt.tgz', onlyIfSuccessful: true
+                archiveArtifacts artifacts: '/home/jenkins-agent/workspace/xmc-checking.txt.tgz', onlyIfSuccessful: true
                 cleanWs cleanWhenAborted: false, cleanWhenFailure: false, cleanWhenNotBuilt: false, cleanWhenUnstable: false
             }
         }
