@@ -19,5 +19,11 @@ pipeline{
                 ansiblePlaybook credentialsId: 'keys', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory.txt', playbook: 'Build.yml', tags: 'oncast'
             }
         }
+        stage('Archive Artifacts'){
+            steps {
+                archiveArtifacts artifacts: 'xmc-checking.txt.tgz', onlyIfSuccessful: true
+                cleanWs cleanWhenAborted: false, cleanWhenFailure: false, cleanWhenNotBuilt: false, cleanWhenUnstable: false
+            }
+        }
     }
 }       
