@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent 'Agent1'
     stages{
         stage('SCM'){
             steps{
