@@ -16,7 +16,7 @@ pipeline{
         }
         stage('Run Playbook'){
             steps{
-                ansiblePlaybook credentialsId: 'keys', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory.txt', playbook: 'Build.yml', tags: 'oncast'
+                ansiblePlaybook credentialsId: 'keys', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'inventory.txt', playbook: 'oncast-controller.yml', tags: 'oncast'
             }
         }
         stage('Archive Artifacts'){
