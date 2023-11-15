@@ -1,8 +1,8 @@
 version: 1
 
 plan:
-  project-key: Oncast
-  plan-key: ON
+  project-key: ON
+  plan-key: OPS
   name: Sample Bamboo Pipeline
 
 stages:
