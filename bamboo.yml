@@ -1,0 +1,21 @@
+version: 2
+
+plan:
+  project-key: ONCAST
+  key: OPS
+  name: Sample Bamboo YAML Pipeline
+
+stages:
+  - name: Build
+    jobs:
+      - name: Echo Build Message
+        tasks:
+          - script:
+              - echo "Building the application..."
+
+  - name: Deploy
+    jobs:
+      - name: Echo Deploy Message
+        tasks:
+          - script:
+              - echo "Deploying the application..."
