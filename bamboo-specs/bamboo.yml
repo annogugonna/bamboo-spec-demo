@@ -1,21 +1,22 @@
-version: 2
+version: 1
 
 plan:
   project-key: ONCAST
-  key: OPS
-  name: Sample Bamboo YAML Pipeline
+  plan-key: OPS
+  name: Sample Bamboo Pipeline
 
 stages:
-#  - name: Build
+  - name: Build  # <-- Make sure to include the 'name' property
     jobs:
-      - name: Echo Build Message
+      - job: EchoBuild
         tasks:
           - script:
-              - echo "Building the application..."
+              - echo "Building the project..."
 
-#  - name: Deploy
+  - name: Deploy  # <-- Make sure to include the 'name' property
     jobs:
-      - name: Echo Deploy Message
+      - job: EchoDeploy
         tasks:
           - script:
-              - echo "Deploying the application..."
+              - echo "Deploying the project..."
+
