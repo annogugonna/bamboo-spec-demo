@@ -6,14 +6,14 @@ plan:
   name: Sample Bamboo YAML Pipeline
 
 stages:
-  - name: Build
+#  - name: Build
     jobs:
       - name: Echo Build Message
         tasks:
           - script:
               - echo "Building the application..."
 
-  - name: Deploy
+#  - name: Deploy
     jobs:
       - name: Echo Deploy Message
         tasks:
