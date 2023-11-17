@@ -1,4 +1,0 @@
----
-!include 'build/plan.yml'
----
-!include 'deployment/plan.yml'
